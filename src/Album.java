@@ -1,7 +1,4 @@
-import java.util.*;
-
 public class Album {
-
     private final String title;
     private final Artist artist;
     private final List<Song> songs;
@@ -30,20 +27,5 @@ public class Album {
 
     @Override
     public String toString() {
-        return "Album: " + title + " by " + artist.getName() +
-                ", tracks: " + songs.size();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Album album)) return false;
-        return title.equals(album.title) &&
-                artist.equals(album.artist);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(title, artist);
     }
 }
