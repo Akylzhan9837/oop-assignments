@@ -13,11 +13,15 @@ public class Main {
         album.addSong(s2);
         album.addSong(s3);
 
-        System.out.println(album);
+        MusicLibrary library = new MusicLibrary();
+        library.add(s1);
+        library.add(s2);
+        library.add(s3);
 
-        System.out.println("Треки:");
-        for (Song song : album.getSongs()) {
-            System.out.println(song);
-        }
+        System.out.println("🔍 Search 'si':");
+        library.searchByTitle("si").forEach(System.out::println);
+
+        System.out.println("\n⏱ Sorted by duration:");
+        library.sortByDuration().forEach(MediaItem::play);
     }
 }
