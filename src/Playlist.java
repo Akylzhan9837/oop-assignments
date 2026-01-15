@@ -1,12 +1,12 @@
 import java.util.*;
 
-public class Album {
+public class Playlist {
 
     private final String title;
     private final Artist artist;
     private final List<Song> songs;
 
-    public Album(String title, Artist artist) {
+    public Playlist(String title, Artist artist) {
         this.title = title;
         this.artist = artist;
         this.songs = new ArrayList<>();
@@ -30,16 +30,16 @@ public class Album {
 
     @Override
     public String toString() {
-        return "Album: " + title + " by " + artist.getName() +
+        return "Playlist: " + title + "" + artist.getName() +
                 ", tracks: " + songs.size();
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Album album)) return false;
-        return title.equals(album.title) &&
-                artist.equals(album.artist);
+        if (!(o instanceof Playlist playlist)) return false;
+        return title.equals(playlist.title) &&
+                artist.equals(playlist.artist);
     }
 
     @Override

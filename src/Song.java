@@ -14,8 +14,10 @@ public class Song extends MediaItem {
     @Override
     public void play() {
         playCount++;
-        System.out.println("Playing song: " + title);
+        System.out.println(title + " (" + duration + " sec) - " +
+                artist.getName() + " | plays: " + playCount);
     }
+
 
     public Artist getArtist() {
         return artist;

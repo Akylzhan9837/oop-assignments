@@ -3,27 +3,30 @@ import java.util.List;
 
 public class Artist {
     private final String name;
-    private final List<Album> albums;
+    private final List<Playlist> playlists;
 
     public Artist(String name) {
         this.name = name;
-        this.albums = new ArrayList<>();
+        this.playlists = new ArrayList<>();
     }
 
     public String getName() {
         return name;
     }
 
-    public void addAlbum(Album album) {
-        albums.add(album);
+    public void addAlbum(Playlist playlist) {
+        playlists.add(playlist);
     }
 
-    public List<Album> getAlbums() {
-        return albums;
+    public List<Playlist> getAlbums() {
+        return playlists;
     }
 
     @Override
     public String toString() {
-        return "Artist: " + name + ", albums: " + albums.size();
+        return "Artist: " + name + ", playlists: " + playlists.size();
+    }
+
+    public void addPlaylist(Playlist playlist) {
     }
 }
